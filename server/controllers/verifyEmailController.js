@@ -19,7 +19,7 @@ exports.verifyEmail = async (req, res) => {
         if(emailVerificationToken){
             res.send("Email Verified!");
         } else {
-            res.send("Unable to email verified!");
+            res.send("Unable to verify email");
         }
     } catch (error) {
         console.log(error.message);

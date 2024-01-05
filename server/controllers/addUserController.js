@@ -3,6 +3,9 @@ const addUserService = require('../services/addUserService');
 const {buildResponce} = require('../helpers/buildResponce');
 
 
+exports.addUserForm = async (req, res) => {
+    res.render('add-user');
+}
 
 exports.addUser = async (req, res) => {
 
@@ -13,7 +16,7 @@ exports.addUser = async (req, res) => {
             buildResponce(res, 200,
                 {
                     error: false,
-                    message: "User added successfully",
+                    message: "User added successfully, email verification is sent to registered email address",
                     data: ''
                 })
         } else {
