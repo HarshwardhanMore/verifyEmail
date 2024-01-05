@@ -20,7 +20,7 @@ exports.addUser = async (req, res) => {
             buildResponce(res, 200,
                 {
                     error: true,
-                    message: "Unable to add, please try again",
+                    message: "User already exists",
                     data: ''
                 })
         }
